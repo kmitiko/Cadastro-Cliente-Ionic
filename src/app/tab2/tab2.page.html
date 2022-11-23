@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Clientes
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense"> <!--header/nav-->
+    <ion-toolbar>
+      <ion-title size="large">Lista de Clientes</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-grid class="ion-grid-padding">
+        <ion-row> <!--header(thead) da tabela-->
+          <ion-col>#</ion-col>
+          <ion-col>Nome</ion-col>
+          <ion-col>Email</ion-col>
+          <ion-col>Telefone</ion-col>
+          <ion-col>Logradouro</ion-col>
+          <ion-col>Número</ion-col>
+          <ion-col>Bairro</ion-col>
+          <ion-col>Cidade</ion-col>
+          <ion-col>CEP</ion-col>
+        </ion-row>
+        <ion-row *ngFor="let cliente of clientes">
+          <ion-col>{{ cliente.id }}</ion-col>
+          <ion-col>={{ cliente.nome }}</ion-col>
+          <ion-col>{{ cliente.email}}</ion-col>
+          <ion-col>{{ cliente.telefone }}</ion-col>
+          <ion-col>{{ cliente.logradouro}}</ion-col>
+          <ion-col>{{ cliente.numero}}</ion-col>
+          <ion-col>{{ cliente.bairro}}</ion-col>
+          <ion-col>{{ cliente.cidade}}</ion-col>
+          <ion-col>{{ cliente.cep}}</ion-col>
+
+
+        </ion-row>
+      </ion-grid>
+</ion-content>
+
+
